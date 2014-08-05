@@ -7,16 +7,17 @@
 /**
  *
  * @author Héctor
+ * @param <E>
  */
 public abstract class ListaAbstract<E> implements Lista<E> {
     
    public ListaAbstract()
-   // post: does nothing
+   // post: hace nada.
    {
    }
 
    public boolean isEmpty()
-   // post: returns true iff list has no elements
+   // post: Retorna true si no hay elementos en la lista.
    {
       return size() == 0;
    }
