@@ -22,27 +22,66 @@ public class ListaSimple<E> extends ListaAbstract<E> {
 
     @Override
     public void addFirst(E value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    // post: value is added to beginning of list
+    // note order that things happen:
+    // head is parameter, then assigned
+     head = new Node<E>(value, head);
+     count++;
+  }
 
     @Override
     public E removeFirst() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    // pre: list is not empty
+    // post: removes and returns value from beginning of list
+    
+     if (isEmpty()==false){
+     Node<E> temp = head;
+     head = head.next(); // move head down list
+     count--;
+     return temp.value();
+     }
+     else 
+         return null;
+    
     }
 
     @Override
     public E getFirst() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    // pre: list is not empty
+    // post: returns first value in list
+        if(isEmpty()==false){
+  
+        return head.value();
+        }
+        else
+            return null;
     }
+    
 
     @Override
     public void addLast(E value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    // post: adds value to end of list
+    // location for new value
+      Node<E> temp = new Node<E>(value,null);
+      if (head != null)
+     {
+         // pointer to possible tail
+         Node<E> finger = head;
+         while (finger.next() != null)
+         {
+                finger = finger.next();
+         }
+		 
+         finger.setNext(temp);
+      } else head = temp;
+	  
+	  count++;
     }
 
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    // post: returns number of elements in lis
+        return count;
     }
    
 }

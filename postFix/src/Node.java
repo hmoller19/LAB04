@@ -11,7 +11,7 @@
  */
 public class Node<E>
 {
-   protected E data; // value stored in this element
+ protected E data; // value stored in this element
    protected Node<E> nextElement; // ref to next
 
    public Node(E v, Node<E> next)
@@ -36,7 +36,22 @@ public class Node<E>
       return nextElement;
    }
 
-   public void setNext(Node<E> next){
+   public void setNext(Node<E> next)
    // post: sets reference to new next value
-           }
+   {
+      nextElement = next;
+   }
+
+   public E value()
+   // post: returns value associated with this element
+   {
+      return data;
+   }
+
+   public void setValue(E value)
+   // post: sets value associated with this element
+   {
+      data = value;
+   }
+
 }

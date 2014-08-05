@@ -12,6 +12,7 @@
 /**
  *
  * @author Héctor
+ * @param <E>
  */
 public interface Lista<E>{
     
@@ -34,8 +35,6 @@ public interface Lista<E>{
     public boolean isEmpty();
     // pre:
     // post: Retorna true si no hay elementos.
-    
-
     
     public int size();
     // pre:  
