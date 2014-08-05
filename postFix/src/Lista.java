@@ -15,25 +15,27 @@
  */
 public interface Lista<E>{
     
-    public void add(int index, E element);
+    public void addFirst(E value);
     // pre: Índice en lista y elemento. 
     // post: Elemento E agregado donde el index lo indica.
     
-    public void clear();
-    // pre: 
-    // post: Limpia la lista.
-    
-    public E get(int index);
+    public E removeFirst();
     // pre: Índice en lista. 
-    // post: Retorna el elemento E guardado en la ubicación que marca el index.
+    // post: Remueve el elemento en el espacio que indica el índice.
     
+     public E getFirst();
+    // pre: list is not empty
+    // post: returns first value in list
+     
+    public void addLast(E value);
+    //pre: lista no está vacía.
+    //post: agrega un valor al final de la lista.
+          
     public boolean isEmpty();
     // pre:
     // post: Retorna true si no hay elementos.
     
-    public E remove(int index);
-    // pre: Índice en lista. 
-    // post: Remueve el elemento en el espacio que indica el índice.
+
     
     public int size();
     // pre:  

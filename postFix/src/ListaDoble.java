@@ -11,22 +11,22 @@
 public class ListaDoble<E> extends ListaAbstract<E> {
 
     @Override
-    public void add(int index, E element) {
+    public void addFirst(E value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void clear() {
+    public E removeFirst() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public E get(int index) {
+    public E getFirst() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public E remove(int index) {
+    public void addLast(E value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -35,5 +35,4 @@ public class ListaDoble<E> extends ListaAbstract<E> {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    
 }

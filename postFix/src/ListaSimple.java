@@ -9,29 +9,34 @@
  * @author Héctor
  */
 public class ListaSimple<E> extends ListaAbstract<E> {
+    
+   protected int count; // list size
+   protected Node<E> head; // ref. to first element
+
+   public ListaSimple()
+   // post: generates an empty list
+   {
+      head = null;
+      count = 0;
+   }
 
     @Override
-    public void add(int index, E element) {
+    public void addFirst(E value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void clear() {
+    public E removeFirst() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public E get(int index) {
+    public E getFirst() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean isEmpty() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public E remove(int index) {
+    public void addLast(E value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -39,6 +44,5 @@ public class ListaSimple<E> extends ListaAbstract<E> {
     public int size() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
    
 }
