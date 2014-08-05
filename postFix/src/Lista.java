@@ -1,9 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+//Universidad del Valle de Guatemala
+//Algoritmos y Estructura de Datos
+//Héctor Möller 09002
+//Esteban Barrera 13413
+//Fecha de entrega: agosto 6, 2014
+//
+//Clase: Lista.java
+//Interfaz de Lista. Indica las operaciones a que implementa lista.
+//
 
 
 /**
