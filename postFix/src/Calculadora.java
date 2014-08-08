@@ -24,7 +24,17 @@ public class Calculadora {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        datos= new StackVector<Integer>();
+        //Se agrega el StackFactory a la calculadora. 
+        //Las implementaciones de Stack dependen de lo que se ingrese en la siguiente línea.
+        //AL = StackArrayList
+        //VE = StackVector
+        //Si se quiere Stack lista, tres tipos de implementación.
+        //LS = StackLista implementando Lista simplemente encadenada.
+        //LD = StackLista implementando Lista doblemente encadenada.
+        //LC = StackLista implementando Lista circular.
+    
+        Stack<Integer> datos = new StackFactory<Integer>().getStack("VE");
+               
         String strLinea1=" ";
         String strLinea= " ";		
         /**
