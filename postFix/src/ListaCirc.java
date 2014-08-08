@@ -9,30 +9,50 @@
  * @author Héctor
  */
 public class ListaCirc<E> extends ListaAbstract<E> {
-
-    @Override
-    public void addFirst(E value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    protected Node<E> tail; 
+    protected int count;
+    
+    public ListaCirc() {
+    // pre: constructs a new circular list
+  
+    tail = null;
+    count = 0;
     }
 
     @Override
+    public void addFirst(E value){
+        // pre: value non-null
+    // post: adds element to head of list
+
+   Node<E> temp = new Node<E>(value);
+   if (tail == null) { // first value added
+       tail = temp;
+       tail.setNext(tail);
+   } else { // element exists in list
+       temp.setNext(tail.next());
+       tail.setNext(temp);
+   }
+   count++;
+}
+
+    @Override
     public E removeFirst() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Node<E> temp = tail.next();
+        tail.setNext(temp.next());
+        count--;
+        return temp.value();
+        
     }
 
     @Override
     public E getFirst() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void addLast(E value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return tail.next().value();
     }
 
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return count; 
     }
 
    

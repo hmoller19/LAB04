@@ -56,27 +56,6 @@ public class ListaSimple<E> extends ListaAbstract<E> {
         else
             return null;
     }
-    
-
-    @Override
-    public void addLast(E value) {
-    // post: adds value to end of list
-    // location for new value
-      Node<E> temp = new Node<E>(value,null);
-      if (head != null)
-     {
-         // pointer to possible tail
-         Node<E> finger = head;
-         while (finger.next() != null)
-         {
-                finger = finger.next();
-         }
-		 
-         finger.setNext(temp);
-      } else head = temp;
-	  
-	  count++;
-    }
 
     @Override
     public int size() {

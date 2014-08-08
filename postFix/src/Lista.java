@@ -17,8 +17,8 @@
 public interface Lista<E>{
     
     public void addFirst(E value);
-    // pre: Índice en lista y elemento. 
-    // post: Elemento E agregado donde el index lo indica.
+    // pre: Elemento. 
+    // post: 
     
     public E removeFirst();
     // pre: Índice en lista. 
@@ -27,10 +27,6 @@ public interface Lista<E>{
      public E getFirst();
     // pre: list is not empty
     // post: returns first value in list
-     
-    public void addLast(E value);
-    //pre: lista no está vacía.
-    //post: agrega un valor al final de la lista.
           
     public boolean isEmpty();
     // pre:
