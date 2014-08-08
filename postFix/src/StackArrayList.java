@@ -1,8 +1,7 @@
 //Universidad del Valle de Guatemala
 //Algoritmos y Estructura de Datos
 //Héctor Möller 09002
-//Ángel Basegoda 13
-//Johnny del Cid 13
+
 //Fecha de entrega: julio  22, 2014
 //
 //Clase: StackArrayList.java

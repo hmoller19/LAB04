@@ -1,7 +1,7 @@
 //Universidad del Valle de Guatemala
 //Algoritmos y Estructura de Datos
 //Héctor Möller 09002
-//Esteban Barrera 13413
+
 //Fecha de entrega: agosto 6, 2014
 //
 //Clase: Lista.java
