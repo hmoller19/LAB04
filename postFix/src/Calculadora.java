@@ -33,7 +33,7 @@ public class Calculadora {
         //LD = StackLista implementando Lista doblemente encadenada.
         //LC = StackLista implementando Lista circular.
     
-        Stack<Integer> datos = new StackFactory<Integer>().getStack("VE");
+        Stack<Integer> datos = new StackFactory<Integer>().getStack("LS");
                
         String strLinea1=" ";
         String strLinea= " ";		
